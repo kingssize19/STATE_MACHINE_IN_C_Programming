@@ -5,7 +5,7 @@
 **Genel Akış :**
 * **HAL Kütüphanesi :** STM32'de donanımı başlatan HAL_Init() ve sistem saatini ayarlayan SystemClock_Config() fonksiyonları kullanılıyor. Bu fonksiyonlar temel olarak STM32'nin donanım altyapısını başlatıyor.
 * **TIMER :** MX_TIM1_Init() fonksiyonu, TIM1 zamanlayıcısının başlatılması için kullanılıyor ve HAL_TIM_Base_Start_IT(&htim1) fonksiyonu, bu zamanlayıcı kesmesinin aktif edilmesini sağlıyor. Böylece her belirlenen sürede bir zamanlayıcı kesmesi tetikleniyor.
-* **while(1) :** while (1) döngüsü içinde, yazılmış olan durum makinesindeki mevcut duruma göre, state_table[current_state]() fonksiyonu çağrılıyor. Bu her bir durumda yapılacak işlemi temsil ediyor. Burada state_table[] fonksiyonu, hangi durumun çalıştırılacağını belirleyen dizidir.
+* **while(1) :** while (1) döngüsü içinde, yazılmış olan durum makinesindeki mevcut duruma göre, state_table\[current_state\]() fonksiyonu çağrılıyor. Bu her bir durumda yapılacak işlemi temsil ediyor. Burada state_table[] fonksiyonu, hangi durumun çalıştırılacağını belirleyen dizidir.
 
 * **state_machine_init() :** Başlangıçta durum makinesi STATE_LED1 durumuna ayarlanıyor ve tüm LED'ler kapatılıyor. Bu durum makinesinin başlatma fonksiyonudur.
 * **Zamanlayıcı Kesme Callback Fonksiyonu (HAL_TIM_PeriodElapsedCallback):** Zamanlayıcı her çalıştıüında clock_counter değeri artırılıyor. Bu sayede belirli bir sürede bir işlem yapılabiliyor.
