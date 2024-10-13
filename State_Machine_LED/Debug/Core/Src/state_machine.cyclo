@@ -1,5 +1,0 @@
-../Core/Src/state_machine.c:20:6:state_machine_init	1
-../Core/Src/state_machine.c:29:6:state_LED1	2
-../Core/Src/state_machine.c:36:6:state_LED2	2
-../Core/Src/state_machine.c:44:6:state_LED3	2
-../Core/Src/state_machine.c:53:6:state_LED4	2
